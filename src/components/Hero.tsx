@@ -6,7 +6,25 @@ export function Hero() {
 
   return (
     <section className="hero" id="top" aria-labelledby="hero-title">
-      {/* Decorative sunrise — pure CSS gradient, no SVG filter, always in view. */}
+      {/* Ambient loop sits behind the cream scrim. Paused (first frame only)
+          under prefers-reduced-motion; the gradient is the load fallback. */}
+      {!reduce && (
+        <video
+          className="hero__video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          aria-hidden="true"
+          tabIndex={-1}
+        >
+          <source src="/hero-loop.mp4" type="video/mp4" />
+        </video>
+      )}
+
+      {/* Decorative sunrise scrim — pure CSS gradient, keeps headline legible
+          (AA) over the video while letting it show through lower in the frame. */}
       <div className="hero__sky" aria-hidden="true">
         <div className="hero__sun" />
       </div>

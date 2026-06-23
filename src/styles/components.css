@@ -87,11 +87,28 @@
   padding-block: clamp(3.5rem, 9vw, 8rem) clamp(3rem, 7vw, 6rem);
   isolation: isolate;
 }
+.hero__video {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 45%;
+}
 .hero__sky {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(180deg, #fff6e8 0%, var(--bg) 62%);
+  /* Cream wash: opaque behind the headline (top), eased to ~0.6 at the
+     bottom so the pour shows through near the CTAs while text stays AA. */
+  background: linear-gradient(
+    180deg,
+    rgba(255, 246, 232, 0.97) 0%,
+    rgba(250, 246, 239, 0.9) 38%,
+    rgba(250, 246, 239, 0.74) 70%,
+    rgba(250, 246, 239, 0.62) 100%
+  );
 }
 .hero__sun {
   position: absolute;
@@ -229,6 +246,19 @@
 }
 .roast-chip--dark .roast-chip__dot {
   background: var(--roast-dark);
+}
+
+/* ---- Coffee banner --------------------------------------------- */
+.coffee-banner {
+  margin-bottom: clamp(2rem, 5vw, 3.25rem);
+}
+.coffee-banner__img {
+  width: 100%;
+  height: clamp(220px, 38vw, 440px);
+  object-fit: cover;
+  object-position: center 55%;
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-md);
 }
 
 /* ---- Coffee grid ----------------------------------------------- */
@@ -599,9 +629,18 @@
 /* ---- Story ----------------------------------------------------- */
 .story {
   display: grid;
-  grid-template-columns: 1.4fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: clamp(1.5rem, 5vw, 4rem);
   align-items: center;
+}
+.story__img {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  max-height: 560px;
+  object-fit: cover;
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-md);
 }
 .story__body {
   color: var(--ink-muted);
@@ -610,6 +649,7 @@
   max-width: 52ch;
 }
 .story-card {
+  margin-top: var(--s-6);
   background: var(--surface);
   border: 1px solid var(--hairline);
   border-radius: var(--r-lg);

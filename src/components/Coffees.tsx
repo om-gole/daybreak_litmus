@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Section, SectionHeader } from "./Section";
 import { Reveal } from "./Reveal";
 import { RoastChip } from "./RoastChip";
+import { Picture } from "./Picture";
 import { coffees } from "../data/content";
 
 export function Coffees() {
@@ -13,6 +14,16 @@ export function Coffees() {
         lead="Four single-origins, roasted this week. New ones land every Monday."
         titleId="coffees-title"
       />
+
+      <Reveal className="coffee-banner">
+        <Picture
+          src="/coffees-flatlay"
+          alt="Four kraft coffee bags on cream linen with scattered single-origin beans, a brass scoop, and dried botanicals."
+          width={2000}
+          height={1342}
+          className="coffee-banner__img"
+        />
+      </Reveal>
 
       <ul className="coffee-grid">
         {coffees.map((coffee, i) => (
