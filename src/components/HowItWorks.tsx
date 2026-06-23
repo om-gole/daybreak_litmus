@@ -5,7 +5,7 @@ export function HowItWorks() {
   return (
     <Section id="how" titleId="how-title">
       <SectionHeader
-        index="01 — How it works"
+        index="01 - How it works"
         title="Good coffee, on autopilot"
         titleId="how-title"
       />

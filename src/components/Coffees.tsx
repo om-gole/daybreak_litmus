@@ -6,7 +6,7 @@ export function Coffees() {
   return (
     <Section id="coffees" titleId="coffees-title">
       <SectionHeader
-        index="02 — This week"
+        index="02 - This week"
         title="Four single-origins, roasted this week"
         titleId="coffees-title"
       />

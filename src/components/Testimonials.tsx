@@ -5,7 +5,7 @@ export function Testimonials() {
   return (
     <Section id="loved" titleId="loved-title">
       <SectionHeader
-        index="05 — Word of mouth"
+        index="05 - Word of mouth"
         title="People wait for Monday"
         titleId="loved-title"
       />

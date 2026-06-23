@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 /**
  * Persistent glassmorphic CTA, always in peripheral vision once you're past the
- * hero — but suppressed while the quiz or footer is on screen (where it would be
+ * hero - but suppressed while the quiz or footer is on screen (where it would be
  * redundant). One IntersectionObserver, disconnected on unmount (StrictMode-safe).
  */
 export function StickyCTA() {

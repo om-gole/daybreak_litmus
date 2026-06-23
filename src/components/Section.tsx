@@ -1,14 +1,14 @@
 import type { ReactNode } from "react";
 
 interface SectionHeaderProps {
-  /** mono index label, e.g. "02 — Coffees" */
+  /** mono index label, e.g. "02 - Coffees" */
   index?: string;
   title: ReactNode;
   lead?: string;
   titleId: string;
 }
 
-/** Flush-left section heading. Static — no scroll motion. */
+/** Flush-left section heading. Static - no scroll motion. */
 export function SectionHeader({ index, title, lead, titleId }: SectionHeaderProps) {
   return (
     <div className="section-head">

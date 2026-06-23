@@ -10,7 +10,7 @@ export function FAQ() {
 
   return (
     <Section id="faq" titleId="faq-title">
-      <SectionHeader index="07 — FAQ" title="Good questions" titleId="faq-title" />
+      <SectionHeader index="07 - FAQ" title="Good questions" titleId="faq-title" />
 
       <ul className="faq">
         {faqs.map((item, i) => {

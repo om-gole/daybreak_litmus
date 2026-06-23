@@ -25,7 +25,7 @@ export const coffees: Coffee[] = [
     region: "Yirgacheffe",
     notes: ["Floral", "Citrus", "Tea-like"],
     roast: "light",
-    match: "Delicate and aromatic — a light roast that tastes like morning.",
+    match: "Delicate and aromatic - a light roast that tastes like morning.",
   },
   {
     id: "colombia",
@@ -33,7 +33,7 @@ export const coffees: Coffee[] = [
     region: "Huila",
     notes: ["Caramel", "Red apple", "Balanced"],
     roast: "medium",
-    match: "The everyday crowd-pleaser — sweet, smooth, and endlessly drinkable.",
+    match: "The everyday crowd-pleaser - sweet, smooth, and endlessly drinkable.",
   },
   {
     id: "sumatra",
@@ -41,7 +41,7 @@ export const coffees: Coffee[] = [
     region: "Mandheling",
     notes: ["Cocoa", "Cedar", "Full body"],
     roast: "dark",
-    match: "Deep and earthy — a dark roast with weight and a long finish.",
+    match: "Deep and earthy - a dark roast with weight and a long finish.",
   },
   {
     id: "guatemala",
@@ -49,7 +49,7 @@ export const coffees: Coffee[] = [
     region: "Antigua",
     notes: ["Chocolate", "Orange", "Spice"],
     roast: "medium",
-    match: "Rich and rounded — chocolate and warm spice with a citrus lift.",
+    match: "Rich and rounded - chocolate and warm spice with a citrus lift.",
   },
 ];
 
@@ -67,7 +67,7 @@ export interface Step {
 export const steps: Step[] = [
   {
     title: "Tell us how you brew",
-    body: "Espresso, pour over, drip, or French press — we tune the grind and pick to match.",
+    body: "Espresso, pour over, drip, or French press - we tune the grind and pick to match.",
   },
   {
     title: "We roast to order",
@@ -105,7 +105,7 @@ export const plans: Plan[] = [
     bags: "Two 12oz bags",
     price: 32,
     cadence: "per week",
-    blurb: "For households that go through it — or a generous solo habit.",
+    blurb: "For households that go through it - or a generous solo habit.",
     popular: true,
   },
   {
@@ -138,7 +138,7 @@ export interface Faq {
 }
 
 export const faqs: Faq[] = [
-  { q: "Can I pause?", a: "Yes — pause anytime from your account page." },
+  { q: "Can I pause?", a: "Yes - pause anytime from your account page." },
   { q: "Do you ship internationally?", a: "Currently the US and Canada only." },
   {
     q: "Is it organic?",

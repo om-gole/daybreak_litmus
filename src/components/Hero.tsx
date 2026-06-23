@@ -14,7 +14,7 @@ export function Hero() {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
           <p className="mono hero__eyebrow">
-            Roasted in {brand.city.split(",")[0]} — Est. {brand.established}
+            Roasted in {brand.city.split(",")[0]} - Est. {brand.established}
           </p>
 
           <h1 id="hero-title" className="hero__title">
@@ -55,7 +55,7 @@ export function Hero() {
               <source src="/hero-loop.mp4" type="video/mp4" />
             </video>
           )}
-          <span className="hero__media-tag mono">No. 001 — The pour</span>
+          <span className="hero__media-tag mono">No. 001 - The pour</span>
         </div>
       </div>
 

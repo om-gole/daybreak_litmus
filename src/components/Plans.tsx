@@ -5,7 +5,7 @@ export function Plans() {
   return (
     <Section id="plans" titleId="plans-title">
       <SectionHeader
-        index="04 — Plans"
+        index="04 - Plans"
         title="Pick your pace"
         titleId="plans-title"
       />

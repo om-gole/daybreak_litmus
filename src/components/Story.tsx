@@ -24,14 +24,14 @@ export function Story() {
         </div>
 
         <div className="story__copy">
-          <p className="index">06 — Our story</p>
+          <p className="index">06 - Our story</p>
           <h2 id="story-title" className="story__title">
             Started in a coffee line, in {brand.established}
           </h2>
           <p className="story__body">
             Two friends met waiting for the same cafe and decided coffee should be
             fresher, more traceable, and a lot more fun. We work directly with
-            farmers, roast in small batches, and ship the day after — so what lands
+            farmers, roast in small batches, and ship the day after - so what lands
             on your counter still tastes like the farm it came from.
           </p>
 

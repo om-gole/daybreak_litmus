@@ -38,7 +38,7 @@ export function Footer() {
 
         <div className="footer__legal mono">
           <span>
-            © {new Date().getFullYear()} {brand.name} — Prices in USD
+            © {new Date().getFullYear()} {brand.name} - Prices in USD
           </span>
           <span>Made for mornings</span>
         </div>

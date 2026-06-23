@@ -26,7 +26,7 @@ const initialState: QuizState = {
   answers: Array(quizSteps.length).fill(undefined),
 };
 
-// Pure reducer — no side effects, so StrictMode's double-invoke is harmless.
+// Pure reducer - no side effects, so StrictMode's double-invoke is harmless.
 function quizReducer(state: QuizState, action: Action): QuizState {
   switch (action.type) {
     case "answer": {
@@ -57,7 +57,7 @@ export function QuizFunnel() {
   return (
     <Section id="quiz" titleId="quiz-title">
       <SectionHeader
-        index="03 — Taste profile"
+        index="03 - Taste profile"
         title="Find your roast in 30 seconds"
         lead="Three quick questions. We'll match you to this week's coffee that fits how you drink."
         titleId="quiz-title"
@@ -165,7 +165,7 @@ function Result({
       transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
     >
       <div className="quiz__result-head">
-        <p className="quiz__count mono">Your match — No. 0{number}</p>
+        <p className="quiz__count mono">Your match - No. 0{number}</p>
         <RoastChip roast={coffee.roast} />
       </div>
 
@@ -184,7 +184,7 @@ function Result({
           coffee.roast
         ].toLowerCase()}.`}
         cta="Claim 10% off"
-        successMessage={`You're in — your ${coffee.origin} ${coffee.region} ships Monday. Check your inbox for the code.`}
+        successMessage={`You're in - your ${coffee.origin} ${coffee.region} ships Monday. Check your inbox for the code.`}
       />
 
       <button type="button" className="quiz__back" onClick={onReset}>
