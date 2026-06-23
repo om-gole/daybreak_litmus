@@ -1,24 +1,22 @@
 import { Section, SectionHeader } from "./Section";
-import { Reveal } from "./Reveal";
 import { testimonials } from "../data/content";
 
 export function Testimonials() {
   return (
-    <Section id="loved" titleId="loved-title" tone="warm">
+    <Section id="loved" titleId="loved-title">
       <SectionHeader
-        eyebrow="Word of mouth"
+        index="05 — Word of mouth"
         title="People wait for Monday"
         titleId="loved-title"
       />
 
-      <ul className="quote-grid">
+      <ul className="quotes">
         {testimonials.map((t, i) => (
-          <Reveal as="li" key={t.name} delay={i * 0.06}>
-            <figure className="quote-card">
-              <blockquote className="quote-card__text">"{t.quote}"</blockquote>
-              <figcaption className="quote-card__name">— {t.name}</figcaption>
-            </figure>
-          </Reveal>
+          <li className="pquote" key={t.name}>
+            <span className="pquote__idx mono">0{i + 1}</span>
+            <blockquote className="pquote__text serif">{t.quote}</blockquote>
+            <cite className="pquote__name mono">{t.name}</cite>
+          </li>
         ))}
       </ul>
     </Section>

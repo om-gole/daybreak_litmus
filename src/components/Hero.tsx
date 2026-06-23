@@ -6,87 +6,65 @@ export function Hero() {
 
   return (
     <section className="hero" id="top" aria-labelledby="hero-title">
-      {/* Ambient loop sits behind the cream scrim. Paused (first frame only)
-          under prefers-reduced-motion; the gradient is the load fallback. */}
-      {!reduce && (
-        <video
-          className="hero__video"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          aria-hidden="true"
-          tabIndex={-1}
-        >
-          <source src="/hero-loop.mp4" type="video/mp4" />
-        </video>
-      )}
-
-      {/* Decorative sunrise scrim — pure CSS gradient, keeps headline legible
-          (AA) over the video while letting it show through lower in the frame. */}
-      <div className="hero__sky" aria-hidden="true">
-        <div className="hero__sun" />
-      </div>
-
-      <div className="container hero__inner">
-        <motion.p
-          className="eyebrow"
-          initial={reduce ? false : { opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          Roasted in {brand.city.split(",")[0]} · Est. {brand.established}
-        </motion.p>
-
-        <motion.h1
-          id="hero-title"
-          className="hero__title"
-          initial={reduce ? false : { opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.05 }}
-        >
-          Fresh single-origin coffee,
-          <br />
-          delivered every week.
-        </motion.h1>
-
-        <motion.p
-          className="hero__lead"
-          initial={reduce ? false : { opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.12 }}
-        >
-          Every week we pick a new coffee from a single farm, roast it the day
-          before it ships, and get it to your door within two days. Pause, skip,
-          or cancel anytime.
-        </motion.p>
-
+      <div className="hero__grid">
         <motion.div
-          className="hero__actions"
-          initial={reduce ? false : { opacity: 0, y: 18 }}
+          className="hero__copy"
+          initial={reduce ? false : { opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.18 }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
-          <a href="#quiz" className="btn btn-primary">
-            Find your roast
-          </a>
-          <a href="#coffees" className="btn btn-ghost">
-            See this week's coffees
-          </a>
+          <p className="mono hero__eyebrow">
+            Roasted in {brand.city.split(",")[0]} — Est. {brand.established}
+          </p>
+
+          <h1 id="hero-title" className="hero__title">
+            Fresh
+            <br />
+            single-origin
+            <br />
+            coffee<span className="hero__dot">.</span>
+          </h1>
+
+          <p className="hero__sub">
+            Every week we pick a new coffee from a single farm, roast it the day
+            before it ships, and land it at your door within two days.
+          </p>
+
+          <div className="hero__actions">
+            <a href="#quiz" className="btn btn-solid">
+              Find your roast
+            </a>
+            <a href="#coffees" className="btn-link">
+              This week's coffees →
+            </a>
+          </div>
         </motion.div>
 
-        <motion.ul
-          className="hero__trust"
-          initial={reduce ? false : { opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.28 }}
-        >
-          <li>Roasted to order</li>
-          <li>Ships in 2 days</li>
-          <li>Cancel anytime</li>
-        </motion.ul>
+        <div className="hero__media" aria-hidden="true">
+          {/* Bleeds off the right edge. Paused first-frame under reduced motion. */}
+          {!reduce && (
+            <video
+              className="hero__video"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              tabIndex={-1}
+            >
+              <source src="/hero-loop.mp4" type="video/mp4" />
+            </video>
+          )}
+          <span className="hero__media-tag mono">No. 001 — The pour</span>
+        </div>
       </div>
+
+      <ul className="hero__meta mono" aria-label="What you get">
+        <li>Roasted to order</li>
+        <li>Ships in 2 days</li>
+        <li>Pause / cancel anytime</li>
+        <li>US &amp; Canada</li>
+      </ul>
     </section>
   );
 }

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { brand } from "../data/content";
 
 const LINKS = [
-  { href: "#how", label: "How it works" },
+  { href: "#how", label: "How" },
   { href: "#coffees", label: "Coffees" },
   { href: "#plans", label: "Plans" },
   { href: "#faq", label: "FAQ" },
@@ -20,10 +20,9 @@ export function Nav() {
 
   return (
     <header className={`nav${scrolled ? " nav--scrolled" : ""}`}>
-      <div className="container nav__inner">
+      <div className="nav__inner">
         <a href="#top" className="nav__brand" aria-label={`${brand.name}, home`}>
-          <span className="nav__sun" aria-hidden="true" />
-          Daybreak
+          Daybreak<span aria-hidden="true">®</span>
         </a>
 
         <nav className="nav__links" aria-label="Primary">
@@ -34,8 +33,8 @@ export function Nav() {
           ))}
         </nav>
 
-        <a href="#quiz" className="btn btn-primary nav__cta">
-          Find your roast
+        <a href="#quiz" className="nav__cta">
+          Find your roast →
         </a>
       </div>
     </header>

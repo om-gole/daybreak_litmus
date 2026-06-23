@@ -10,7 +10,7 @@ export function FAQ() {
 
   return (
     <Section id="faq" titleId="faq-title">
-      <SectionHeader eyebrow="FAQ" title="Good questions" titleId="faq-title" />
+      <SectionHeader index="07 — FAQ" title="Good questions" titleId="faq-title" />
 
       <ul className="faq">
         {faqs.map((item, i) => {
@@ -28,7 +28,8 @@ export function FAQ() {
                   aria-controls={panelId}
                   onClick={() => setOpen(isOpen ? null : i)}
                 >
-                  <span>{item.q}</span>
+                  <span className="faq__idx mono">0{i + 1}</span>
+                  <span className="faq__q">{item.q}</span>
                   <span className="faq__icon" aria-hidden="true" />
                 </button>
               </h3>

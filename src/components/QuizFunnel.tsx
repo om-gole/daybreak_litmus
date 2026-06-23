@@ -57,7 +57,7 @@ export function QuizFunnel() {
   return (
     <Section id="quiz" titleId="quiz-title">
       <SectionHeader
-        eyebrow="Taste profile"
+        index="03 — Taste profile"
         title="Find your roast in 30 seconds"
         lead="Three quick questions. We'll match you to this week's coffee that fits how you drink."
         titleId="quiz-title"
@@ -91,8 +91,9 @@ export function QuizFunnel() {
                 exit="exit"
                 transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
               >
-                <p className="quiz__count">
-                  Question {state.step + 1} of {quizSteps.length}
+                <p className="quiz__count mono">
+                  Question {String(state.step + 1).padStart(2, "0")} /{" "}
+                  {String(quizSteps.length).padStart(2, "0")}
                 </p>
                 <h3 className="quiz__question">{quizSteps[state.step].question}</h3>
                 <p className="quiz__helper">{quizSteps[state.step].helper}</p>
@@ -164,15 +165,15 @@ function Result({
       transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
     >
       <div className="quiz__result-head">
-        <p className="quiz__count">Your match</p>
+        <p className="quiz__count mono">Your match — No. 0{number}</p>
         <RoastChip roast={coffee.roast} />
       </div>
 
       <h3 className="quiz__match-name">
-        {coffee.origin} <span>{coffee.region}</span>
+        {coffee.origin} <span className="mono">{coffee.region}</span>
       </h3>
       <p className="quiz__match-why">{coffee.match}</p>
-      <ul className="quiz__match-notes" aria-label="Tasting notes">
+      <ul className="quiz__match-notes mono" aria-label="Tasting notes">
         {coffee.notes.map((n) => (
           <li key={n}>{n}</li>
         ))}

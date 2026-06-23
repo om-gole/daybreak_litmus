@@ -3,8 +3,8 @@ import { roastLabel } from "../data/content";
 
 export function RoastChip({ roast }: { roast: RoastLevel }) {
   return (
-    <span className={`roast-chip roast-chip--${roast}`}>
-      <span className="roast-chip__dot" aria-hidden="true" />
+    <span className={`roast mono roast--${roast}`}>
+      <span className="roast__dot" aria-hidden="true" />
       {roastLabel[roast]}
     </span>
   );

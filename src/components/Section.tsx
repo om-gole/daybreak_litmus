@@ -1,23 +1,23 @@
 import type { ReactNode } from "react";
-import { Reveal } from "./Reveal";
 
 interface SectionHeaderProps {
-  eyebrow?: string;
-  title: string;
+  /** mono index label, e.g. "02 — Coffees" */
+  index?: string;
+  title: ReactNode;
   lead?: string;
   titleId: string;
 }
 
-/** Section heading block with a single labelled <h2> per section. */
-export function SectionHeader({ eyebrow, title, lead, titleId }: SectionHeaderProps) {
+/** Flush-left section heading. Static — no scroll motion. */
+export function SectionHeader({ index, title, lead, titleId }: SectionHeaderProps) {
   return (
-    <Reveal className="section-head">
-      {eyebrow && <p className="eyebrow">{eyebrow}</p>}
+    <div className="section-head">
+      {index && <p className="index">{index}</p>}
       <h2 id={titleId} className="section-title">
         {title}
       </h2>
       {lead && <p className="section-lead">{lead}</p>}
-    </Reveal>
+    </div>
   );
 }
 
@@ -26,18 +26,15 @@ interface SectionProps {
   titleId: string;
   children: ReactNode;
   className?: string;
-  tone?: "default" | "warm";
 }
 
-/** Semantic <section> shell with an anchor id + aria-labelledby wiring. */
-export function Section({ id, titleId, children, className, tone = "default" }: SectionProps) {
+/** Semantic <section> shell + anchor id + aria-labelledby. */
+export function Section({ id, titleId, children, className }: SectionProps) {
   return (
     <section
       id={id}
       aria-labelledby={titleId}
-      className={`section${tone === "warm" ? " section--warm" : ""}${
-        className ? ` ${className}` : ""
-      }`}
+      className={`section${className ? ` ${className}` : ""}`}
     >
       <div className="container">{children}</div>
     </section>

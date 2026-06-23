@@ -1,38 +1,39 @@
 :root {
-  /* ---- Surfaces ---- */
-  --bg: #faf6ef;          /* cream */
-  --bg-warm: #f3ede2;     /* raised warm surface */
-  --surface: #fffdf9;     /* card */
-  --hairline: #e6ddcd;
+  /* ---- Surfaces (sharpened warm — zero pastel fills) ---- */
+  --bg: #f7f2e9;          /* cream */
+  --ink: #15100a;         /* near-black — ~16:1 on cream */
+  --ink-muted: #5a4d3f;   /* ~5.4:1 on cream */
+  --ink-faint: #736652;   /* ~5:1 on cream — AA for small mono indices */
 
-  /* ---- Ink ---- */
-  --ink: #2b1d14;         /* espresso — 13:1 on cream */
-  --ink-muted: #6b5d4f;   /* 5.4:1 on cream */
-  --ink-soft: #8a7a69;
+  /* ---- Accent (punctuation, never fills) ---- */
+  --accent: #c0492a;      /* terracotta — rules, hover, the period */
+  --accent-deep: #a23e22; /* AA-safe (~4.7:1) for small accent text */
 
-  /* ---- Accent / brand ---- */
-  --accent: #c65d3b;      /* terracotta */
-  --accent-deep: #b04e2e; /* AA-safe for small text on cream */
-  --accent-ink: #7a2e16;
-  --sunrise-1: #f4a259;   /* decorative gradient only */
-  --sunrise-2: #e76f51;
-  --sunrise-3: #f6c177;
+  /* ---- Lines ---- */
+  --line: rgba(21, 16, 10, 0.14);
+  --line-strong: rgba(21, 16, 10, 0.32);
 
-  /* ---- Roast chips ---- */
-  --roast-light: #d9a441;
-  --roast-medium: #b5703a;
-  --roast-dark: #5a3a2a;
+  /* ---- Roast markers ---- */
+  --roast-light: #c79a3a;
+  --roast-medium: #b06a30;
+  --roast-dark: #4a3322;
 
   /* ---- Type ---- */
-  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
-  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+  --font-serif: "Fraunces", Georgia, serif;        /* hero + pull-quotes */
+  --font-grotesk: "Space Grotesk", system-ui, sans-serif; /* headers + body */
+  --font-mono: "JetBrains Mono", ui-monospace, monospace; /* utility */
 
-  --step--1: clamp(0.83rem, 0.78rem + 0.2vw, 0.95rem);
-  --step-0: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
-  --step-1: clamp(1.2rem, 1.1rem + 0.5vw, 1.4rem);
-  --step-2: clamp(1.5rem, 1.3rem + 0.9vw, 2rem);
-  --step-3: clamp(1.9rem, 1.5rem + 1.6vw, 2.75rem);
-  --step-hero: clamp(2.6rem, 1.8rem + 4vw, 5rem);
+  /* Brutalist scale — violent jump between display and utility */
+  --step-hero: clamp(3.5rem, 13vw, 11rem);
+  --step-display: clamp(2.5rem, 7vw, 6rem);
+  --step-2: clamp(1.6rem, 3vw, 2.6rem);
+  --step-1: clamp(1.15rem, 1.4vw, 1.5rem);
+  --step-0: clamp(1rem, 0.97rem + 0.2vw, 1.125rem);
+  --util: 0.6875rem;       /* 11px — tiny tracked mono */
+  --util-lg: 0.8125rem;
+
+  --track-util: 0.24em;
+  --lead-tight: 0.92;
 
   /* ---- Space ---- */
   --s-1: 0.25rem;
@@ -44,19 +45,10 @@
   --s-7: 3rem;
   --s-8: 4.5rem;
   --s-9: 7rem;
+  --s-10: 10rem;
 
-  /* ---- Geometry ---- */
-  --r-sm: 8px;
-  --r-md: 14px;
-  --r-lg: 22px;
-  --r-pill: 999px;
-  --maxw: 1100px;
-  --maxw-prose: 64ch;
-
-  /* ---- Shadow (warm) ---- */
-  --shadow-sm: 0 1px 2px rgba(43, 29, 20, 0.06), 0 2px 8px rgba(43, 29, 20, 0.04);
-  --shadow-md: 0 6px 20px rgba(43, 29, 20, 0.08), 0 2px 6px rgba(43, 29, 20, 0.05);
-  --shadow-lg: 0 18px 50px rgba(43, 29, 20, 0.14);
-
-  --ring: 0 0 0 3px rgba(198, 93, 59, 0.35);
+  /* ---- Geometry (sharp) ---- */
+  --edge: 2px;             /* max corner radius anywhere */
+  --maxw: 1440px;
+  --gutter: clamp(1.25rem, 5vw, 5rem);
 }

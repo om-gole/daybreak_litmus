@@ -8,6 +8,7 @@ import { Testimonials } from "./components/Testimonials";
 import { Story } from "./components/Story";
 import { FAQ } from "./components/FAQ";
 import { Footer } from "./components/Footer";
+import { StickyCTA } from "./components/StickyCTA";
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
         <FAQ />
       </main>
       <Footer />
+      <StickyCTA />
     </>
   );
 }
